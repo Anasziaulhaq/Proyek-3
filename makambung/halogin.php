@@ -52,13 +52,28 @@
                 </div>
                 <div class="tab-pane fade show" id="daftar" role="tabpanel" aria-labelledby="daftar-tab">
                     <h3  class="register-heading">Daftar</h3>
-                    <div class="row register-form">
-                        <p>Daftar disini......</p>
-                        <div class="col-md-6">
-                            
+                    <form class="row register-form" action="register.php" method="post" enctype="multipart/form-data">
+                    <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Nama" value="" name="nama" id="nama" />
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Email" value="" name="email" id="email" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Username" value="" name="username" id="username" />
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" placeholder="Password" value="" name="password" id="password" />
+                            </div>
+                            <div class="form-group">
+                                <input type="password2" class="form-control" placeholder="Ulangi Password" value="" name="password2" id="password2" />
+                            </div>
+                            <input type="submit" class="btnRegister" value="Register" name="register">
                         </div>
-                        <div class="col-md-6"> 
-                            
+                        </form>
+                        
+            
                         </div>
                     </div>
                 </div>

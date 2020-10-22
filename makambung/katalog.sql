@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 22, 2020 at 06:26 AM
+-- Generation Time: Oct 22, 2020 at 04:11 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -50,7 +50,9 @@ INSERT INTO `katalog` (`id_katalog`, `no`, `nama`, `keterangan`, `gambar`, `kome
 --
 
 CREATE TABLE `user` (
-  `id_user` char(15) NOT NULL,
+  `id_user` int(100) NOT NULL,
+  `nama` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
   `username` varchar(100) NOT NULL,
   `password` varchar(50) NOT NULL,
   `last_login` datetime NOT NULL,
@@ -61,8 +63,9 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id_user`, `username`, `password`, `last_login`, `deleted`) VALUES
-('1', 'doni', '123', '2020-10-22 11:21:51', 0);
+INSERT INTO `user` (`id_user`, `nama`, `email`, `username`, `password`, `last_login`, `deleted`) VALUES
+(1, 'doni', 'doni@gmail.com', 'doni', '123', '2020-10-22 18:41:01', 0),
+(5, 'hafiz', 'hafiznur312@gmail.com', 'hafiz', '123', '2020-10-22 20:19:07', 0);
 
 --
 -- Indexes for dumped tables
@@ -89,6 +92,12 @@ ALTER TABLE `user`
 --
 ALTER TABLE `katalog`
   MODIFY `id_katalog` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id_user` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
